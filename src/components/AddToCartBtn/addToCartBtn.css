@@ -1,0 +1,19 @@
+.addToCartBtn{
+    width: 50%;
+    padding: 5px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    background-color: #7B2CBF;
+    border-radius: 5px;
+}
+
+.addToCartBtn:hover{
+    background-color: #3C096C;
+}
+
+.addToCartText{
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

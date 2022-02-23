@@ -1,10 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { BellIcon, MenuIcon, XIcon,ShoppingCartIcon } from '@heroicons/react/outline'
+import './header.css'
+import Cart from '../Cart/Cart'
 
 const navigation = [
-  { name: 'Inicio', href: '/', current: true },
+  { name: 'Inicio', href: '/', current: false },
   { name: 'Sobre Nosotros', href: '/sobre-nosotros', current: false },
   { name: 'Contacto', href: '/contacto', current: false },
   { name: 'Tienda', href: '/tienda', current: false },
@@ -16,7 +18,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="hCont">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -32,7 +34,7 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
@@ -60,6 +62,7 @@ export default function Example() {
                         {item.name}
                       </a>
                     ))}
+                    <Cart />
                   </div>
                 </div>
               </div>

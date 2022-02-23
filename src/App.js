@@ -2,9 +2,11 @@ import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ProductDetail from './pages/ProductDetail';
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import './index.css'
+
 
 function App() {
   return (

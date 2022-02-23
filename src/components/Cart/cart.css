@@ -1,0 +1,22 @@
+.addToCart {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.addToCartQty{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addToCartQtyText{
+    font-size: 10px;
+    font-weight: 700;
+}
