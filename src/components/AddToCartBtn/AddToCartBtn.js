@@ -9,18 +9,6 @@ const AddToCartBtn = (props) => {
   const [qty, setQty] = useRecoilState(cartAtom);
   const [cartList, setCartList] = useRecoilState(cartItems);
 
-
-  useEffect(() => {
-    var cartStorage;
-    if (JSON.parse(localStorage.getItem('cart-items-storage')) == null) {
-      cartStorage = [];
-    } else {
-      cartStorage = JSON.parse(localStorage.getItem('cart-items-storage'));
-      setCartList(cartStorage);
-      setQty(cartStorage.length)
-    }
-  }, [])
-
   const saveToLocalStorage = (items) => {
     localStorage.setItem('cart-items-storage', JSON.stringify(items))
     setQty(qty + 1);

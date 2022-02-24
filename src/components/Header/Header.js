@@ -1,9 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
+import React, { useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon,ShoppingCartIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import './header.css'
 import Cart from '../Cart/Cart'
+import { useRecoilState } from 'recoil'
+import cartItems from '../../atoms/cartItems'
+import cartAtom from '../../atoms/cartAtom'
 
 const navigation = [
   { name: 'Inicio', href: '/', current: false },
@@ -17,6 +20,22 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+
+  const [cartList, setCartList] = useRecoilState(cartItems);
+  const [qty, setQty] = useRecoilState(cartAtom);
+
+
+  useEffect(() => {
+    var cartStorage;
+    if (JSON.parse(localStorage.getItem('cart-items-storage')) == null) {
+      cartStorage = [];
+    } else {
+      cartStorage = JSON.parse(localStorage.getItem('cart-items-storage'));
+      setCartList(cartStorage);
+      setQty(cartStorage.length)
+    }
+  }, [])
+
   return (
     <Disclosure as="nav" className="hCont">
       {({ open }) => (
