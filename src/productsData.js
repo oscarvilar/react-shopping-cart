@@ -32,31 +32,31 @@ export default [
     },
     {
       id: "5",
-      name: "Grumpy Cat Poster",
-      description: "Everyone's favorite cat who loves to hate",
+      name: "New Product",
+      description: "Lorem ipsum dolor sit amet",
       price: 15,
       img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
     },
     {
       id: "6",
-      name: "Stretch Armstrong",
+      name: "Another New Product",
       description:
-        "He bends! He stretches! He even ties in knots, but always returns to his original shape!",
+        "Mauris condimentum leo pretium ipsum convallis",
       price: 20,
       img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
     },
     {
       id: "7",
-      name: "Hungry Hungry Hippos Game",
+      name: "More Products",
       description:
-        "It's a race, it's a chase, hurry up and feed their face! Who will win? No one knows! Feed the hungry hip-ip-pos!",
+        "Sed consequat pretium urna",
       price: 30,
       img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
     },
     {
       id: "8",
-      name: "Crossfire board game",
-      description: "You'll get caught up in the crossfire!",
+      name: "And More Products",
+      description: "Mauris velit felis, molestie sit amet libero sed",
       price: 35,
       img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
     },  

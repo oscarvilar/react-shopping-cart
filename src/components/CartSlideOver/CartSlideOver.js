@@ -4,6 +4,7 @@ import { XIcon } from '@heroicons/react/outline'
 import cartState from '../../atoms/cartState'
 import cartItems from '../../atoms/cartItems'
 import { useRecoilState } from 'recoil';
+import cartAtom from '../../atoms/cartAtom'
 
 const products = [
   {
@@ -33,6 +34,19 @@ const products = [
 export default function CartSlideOver() {
   const [open, setOpen] = useRecoilState(cartState)
   const [cartList, setCartList] = useRecoilState(cartItems);
+  const [qty, setQty] = useRecoilState(cartAtom);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('cart-items-storage', JSON.stringify(items))
+  }
+
+  const removeCartItem = (product) => {
+    const newCartList = cartList.filter((cartList) => cartList.id !== product.id);
+    setCartList(newCartList);
+    saveToLocalStorage(newCartList);
+    setQty(qty - 1);
+  }
+
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -80,6 +94,7 @@ export default function CartSlideOver() {
                     <div className="mt-8">
                       <div className="flow-root">
                         <ul role="list" className="-my-6 divide-y divide-gray-200">
+                          {/* MAP */}
                           {cartList.map((product) => (
                             <li key={product.id} className="flex py-6">
                               <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -104,7 +119,7 @@ export default function CartSlideOver() {
                                   <p className="text-gray-500">Qty {product.quantity}</p>
 
                                   <div className="flex">
-                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">
+                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500" onClick={()=>removeCartItem(product)}>
                                       Remove
                                     </button>
                                   </div>
