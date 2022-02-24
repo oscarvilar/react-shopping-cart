@@ -119,7 +119,7 @@ export default function CartSlideOver() {
                                   <p className="text-gray-500">Qty {product.quantity}</p>
 
                                   <div className="flex">
-                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500" onClick={()=>removeCartItem(product)}>
+                                    <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500" onClick={() => removeCartItem(product)}>
                                       Remove
                                     </button>
                                   </div>
