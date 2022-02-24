@@ -1,9 +1,9 @@
-.addToCart {
+.cart {
     display: flex;
     align-items: center;
     position: relative;
 }
-.addToCartQty{
+.cartQty{
     position: absolute;
     top: 0;
     right: 0;
@@ -16,7 +16,7 @@
     justify-content: center;
 }
 
-.addToCartQtyText{
+.cartQtyText{
     font-size: 10px;
     font-weight: 700;
 }

@@ -27,7 +27,7 @@ const Products = () => {
                 </div>
                 <p className="text-lg font-medium text-white">{product.price}€</p>
               </div>
-              <AddToCartBtn />
+              <AddToCartBtn productData = {product}/>
             </div>
           ))}
         </div>

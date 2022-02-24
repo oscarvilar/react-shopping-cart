@@ -6,12 +6,14 @@ import Header from './components/Header/Header'
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import './index.css'
+import CartSlideOver from "./components/CartSlideOver/CartSlideOver";
 
 
 function App() {
   return (
     <div>
       <Header />
+      <CartSlideOver />
 
       <Routes>
         <Route exact path="/" element={<Home />}></Route>

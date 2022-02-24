@@ -4,7 +4,8 @@ export default [
       name: "Grumpy Cat Poster",
       description: "Everyone's favorite cat who loves to hate",
       price: 15,
-      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
+      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png',
+      cartQty:0
     },
     {
       id: "2",

@@ -1,20 +1,64 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './addToCartBtn.css'
 import { useRecoilState } from 'recoil'
 import cartAtom from '../../atoms/cartAtom'
+import cartItems from '../../atoms/cartItems'
 
-const AddToCartBtn = () => {
+const AddToCartBtn = (props) => {
 
   const [qty, setQty] = useRecoilState(cartAtom);
-  var cont = 0;
+  const [cartList, setCartList] = useRecoilState(cartItems);
 
-  const handleClick = (e) =>{
-    setQty(qty+1);
-}
+
+  useEffect(() => {
+    var cartStorage;
+    if (JSON.parse(localStorage.getItem('cart-items-storage')) == null) {
+      cartStorage = [];
+    } else {
+      cartStorage = JSON.parse(localStorage.getItem('cart-items-storage'));
+      setCartList(cartStorage);
+      setQty(cartStorage.length)
+    }
+  }, [])
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('cart-items-storage', JSON.stringify(items))
+    setQty(qty + 1);
+
+  }
+
+  const ifRepeated = (product, []) => {
+
+    var isRepeated = false;
+
+    for (let i = 0; i < cartList.length; i++) {
+      if (product.id === cartList[i].id) {
+        isRepeated = true;
+      }
+    }
+    return isRepeated;
+  }
+
+
+  function addToCart() {
+    const newCartList = [...cartList, props.productData]
+    if (ifRepeated(props.productData, newCartList)) {
+      console.log('Esta Repetido')
+    }
+    else {
+      setCartList(newCartList);
+      saveToLocalStorage(newCartList)
+      console.log(newCartList);
+    }
+  }
+
+  const handleClick = (e) => {
+    addToCart();
+  }
 
   return (
     <a className='addToCartBtn' onClick={handleClick}>
-        <p className='addToCartText'>Añadir al Carrito</p>
+      <p className='addToCartText'>Añadir al Carrito</p>
     </a>
   )
 }
