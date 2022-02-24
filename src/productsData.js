@@ -2,7 +2,7 @@ export default [
     {
       id: "1",
       name: "Grumpy Cat Poster",
-      description: "Everyone's favorite cat who loves to hate",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sapien arcu, tristique a nisi molestie, sodales sollicitudin libero. Sed euismod lacus eget nunc luctus, at lobortis leo luctus. Vestibulum eget feugiat ipsum, eu sollicitudin arcu. Proin iaculis congue nunc. In dui nulla, feugiat vel purus quis, porttitor bibendum leo.",
       price: 15,
       img:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png',
       cartQty:0

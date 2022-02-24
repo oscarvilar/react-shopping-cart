@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './addToCartBtn.css'
 import { useRecoilState } from 'recoil'
 import cartAtom from '../../atoms/cartAtom'
