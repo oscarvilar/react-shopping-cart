@@ -26,13 +26,13 @@ const Products = () => {
                 />
               </div>
               <div className="mt-4 flex justify-between">
-                <div>
+                <div className='products-container'>
                   <h2 className="text-lg text-white">
                   <Link to={`/products/${product.id}`}>{product.name}</Link>
                   </h2>
                 </div>
-                <p className="text-lg font-medium text-white">{product.price}€</p>
               </div>
+                <p className="text-lg font-medium text-white">{product.price}€</p>
               <AddToCartBtn productData = {product}/>
     </div>)
     setData(postData)
