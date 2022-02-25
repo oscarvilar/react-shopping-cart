@@ -23,8 +23,6 @@ function ProductDetail() {
                 <h1 className="title">{thisProduct.name}</h1>
                 <p className="desc">{thisProduct.description}</p>
                 <div className="priceContainer"></div>
-                <p className="price">{thisProduct.price} €</p>
-                <div className="addToCartContainer"><AddToCartBtn productData={thisProduct} /></div>
                 <div className="productIcons">
                     <div className="iconContainer">
                         <BsTruck />
@@ -39,6 +37,8 @@ function ProductDetail() {
                         <p className="text-lg">Envío Gratis</p>
                     </div>
                 </div>
+                <p className="price">{thisProduct.price} €</p>
+                <div className="addToCartContainer"><AddToCartBtn productData={thisProduct} /></div>
             </div>
         </div>
     )
