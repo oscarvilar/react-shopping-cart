@@ -1,0 +1,21 @@
+.home{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featuredContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+}
+.imgContainer img{
+    max-height: 250px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}

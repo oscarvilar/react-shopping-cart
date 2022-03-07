@@ -1,0 +1,36 @@
+.cardContainer{
+    background-color: #240046;
+    margin: 20px;
+    color: white;
+    border: 2px solid #7B2CBF;
+    border-radius: 15px;
+}
+
+.cardContainer:first-child{
+    margin-left: 0px;
+}
+
+.cardContainer:last-child{
+    margin-right: 0px;
+}
+
+.infoContainer{
+ padding: 15px 10px;
+ font-family: 'Rubik', sans-serif;
+ font-weight: 300; 
+}
+
+.infoContainer h2:first-child{
+ 
+}
+
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+}
+
+.buttonContainer a{
+    width: 90%;
+}

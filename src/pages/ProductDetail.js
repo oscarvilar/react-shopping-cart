@@ -20,19 +20,19 @@ function ProductDetail() {
                 />
             </div>
             <div className="right-col">
-                <h1 className="title">{thisProduct.name}</h1>
-                <p className="desc">{thisProduct.description}</p>
+                <h1 className="texto title">{thisProduct.name}</h1>
+                <p className="texto desc">{thisProduct.description}</p>
                 <div className="priceContainer"></div>
                 <div className="productIcons">
                     <div className="iconContainer">
                         <BsTruck />
-                        <p className="text-lg">Envío 24h</p>
+                        <p className="texto text-lg">Envío 24h</p>
                     </div>
-                    <div className="iconContainer">
+                    <div className="texto iconContainer">
                         <BiWorld />
                         <p className="text-lg">Envío global</p>
                     </div>
-                    <div className="iconContainer">
+                    <div className="texto iconContainer">
                         <BiEuro />
                         <p className="text-lg">Envío Gratis</p>
                     </div>
