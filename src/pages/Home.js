@@ -2,6 +2,7 @@ import React from "react";
 import FeaturedCard from "../components/Featured/FeaturedCard";
 import './styles/home.css'
 import Hero from '../components/Hero/Hero'
+import Play from "../components/play/Play";
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
           <FeaturedCard id={4} />
           <FeaturedCard id={5} />
         </div>
+        <Play />
       </div>
     </div>
   );

@@ -46,3 +46,15 @@
     width: 20%;
     text-align: center;
   } 
+
+  @media (max-width: 600px) {
+    .heroInfo{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .heroInfo a {
+        width: 100%;
+    }
+    
+}
