@@ -9,12 +9,6 @@
     justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-    .featuredContainer{
-        flex-direction: column;
-        padding: 25px;
-    }
-}
 
 .imgContainer{
     display: flex;
@@ -24,4 +18,25 @@
     max-height: 250px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+}
+@media (max-width: 425px) {
+    .featuredContainer{
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .imgContainer img{
+        max-height: none;
+    }
+}
+
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {  
+    .featuredContainer{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .cardContainer{
+        width: 40%;
+    }
 }
