@@ -25,8 +25,11 @@ export default function CartSlideOver() {
 
   function getSubtotal(){
     var subtotalValue = JSON.parse(localStorage.getItem('cart-items-storage'));
+    if (subtotalValue !=null){
     const sumall = subtotalValue.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
     return sumall
+    }
+    
   }
 
   return (
