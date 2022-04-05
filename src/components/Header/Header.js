@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React, { useEffect } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import './header.css'
 import Cart from '../Cart/Cart'
@@ -10,8 +10,8 @@ import cartAtom from '../../atoms/cartAtom'
 
 const navigation = [
   { name: 'Inicio', href: '/', current: false },
-  { name: 'Sobre Nosotros', href: '/sobre-nosotros', current: false },
-  { name: 'Contacto', href: '/contacto', current: false },
+  // { name: 'Sobre Nosotros', href: '/sobre-nosotros', current: false },
+  // { name: 'Contacto', href: '/contacto', current: false },
   { name: 'Tienda', href: '/tienda', current: false },
 ]
 
